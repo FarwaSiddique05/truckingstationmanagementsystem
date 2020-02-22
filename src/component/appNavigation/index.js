@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 // import {useStyles} from './style'
 import Header from '../header'
-import SideBar from '../sidebar'
+import Users from '../mainscreen/users'
 export default function Dashboard() {
 //   const classes = useStyles();
 
@@ -24,7 +24,8 @@ export default function Dashboard() {
     //   </Grid>
     // </div>
     <div>
-        <Header />
+  <Header />
+  <Users />
     </div>
   );
 }
