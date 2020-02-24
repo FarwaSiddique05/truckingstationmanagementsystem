@@ -8,7 +8,6 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-// import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -28,32 +27,18 @@ export default function AddUser() {
 const fnameHandler = (e)=>{
   fnameSet(e.target.value)
 }
-const[lname, lnameSet]=useState('');
-const lnameHandler = (e)=>{
-  lnameSet(e.target.value)
-}
-const[email, emailSet]=useState('');
-const emailHandler = (e)=>{
-  emailSet(e.target.value)
+
+const[address, addressSet]=useState('');
+const addressHandler = (e)=>{
+  addressSet(e.target.value)
 }
 const[phone, phoneSet]=useState('');
 const phoneHandler = (e) =>{
   phoneSet(e.target.value)
 }
-const[cnic, cnicSet]=useState('');
-const cnicHandler = (e) =>{
-  cnicSet(e.target.value)
-}
-const[password, passwordSet]=useState('');
-const passwordHandler = (e) =>{
-  passwordSet(e.target.value)
-}
 console.log(fname)
-console.log(lname)
-console.log(email)
+console.log(address)
 console.log(phone)
-console.log(cnic)
-console.log(password)
   const [state, setState] = React.useState({
     user: '',
     name: 'hai',
@@ -80,57 +65,41 @@ console.log(password)
             <Grid container spacing>
             <Grid item xs={6} sm={6}>
                   <Typography variant="h6" gutterBottom>
-                   First Name
+                   Party Name
                  </Typography>
                  </Grid>
-                 <Grid item xs={6} sm={6}>
-                  <Typography variant="h6" gutterBottom>
-                   Last Name
-                  </Typography>
-                  </Grid>
+                 
             </Grid>
             <Grid container spacing={2}>
-              <Grid item sm={6} xs={6}>
+              <Grid item sm={12} xs={6}>
               <TextField
                 autoComplete="fname"
-                name="firstName"
+                name="Name"
                 variant="outlined"
                 required
                 fullWidth
-                id="firstName"
-                label="First Name"
+                id="Name"
+                label="Party Name"
                 autoFocus
                 value={fname}
                 onChange={fnameHandler}
               />
               </Grid>
-              <Grid item sm={6} xs={6}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
-                autoComplete="lname"
-                value={lname}
-                onChange={lnameHandler}
-              />
-              </Grid>
+              
             </Grid>
             <Typography variant="h6" gutterBottom>
-        Email Address
+         Address
       </Typography>
               <TextField
                 variant="outlined"
                 required
                 fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-                value={email}
-                onChange={emailHandler}
+                id="address"
+                label=" Address"
+                name="address"
+                autoComplete="address"
+                value={address}
+                onChange={addressHandler}
               />
                       <Typography variant="h6" gutterBottom>
         Phone Number
@@ -147,48 +116,17 @@ console.log(password)
                 value={phone}
                 onChange={phoneHandler}
               />
-                      <Typography variant="h6" gutterBottom>
-        CNIC
-      </Typography>
-          
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="cnic"
-                label="CNIC"
-                name="cnic"
-                autoComplete="cnic"
-                value={cnic}
-                onChange={cnicHandler}
-              />
-                       <Typography variant="h6" gutterBottom>
-        Password
-      </Typography>
-        
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-                value={password}
-                onChange={passwordHandler}
-              />
-           
+                    
       <Grid container spacing={0}>
         <Grid item xs={12} sm={12} >
          <Typography variant="h6" gutterBottom style={{ marginTop: "10px" ,}} >
-        Select User
+        Select Bank
       </Typography> 
         </Grid>
         <Grid item xs={12} sm={12}> 
         <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
-          user
+          Bank
         </InputLabel>
         <Select
           native
@@ -201,9 +139,9 @@ console.log(password)
           }}
           >
           <option value="" />
-          <option value={10}>Admin</option>
-          <option value={20}>User1</option>
-          <option value={30}>User2</option>
+          <option value={10}>HBL</option>
+          <option value={20}>UBL</option>
+          <option value={30}>PUNJANB BANK</option>
         </Select>
       </FormControl>
         </Grid>

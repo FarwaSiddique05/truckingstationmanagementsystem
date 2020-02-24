@@ -15,7 +15,7 @@ export const useStyles = makeStyles(theme => ({
       marginTop: theme.spacing(3),
     },
     submit: {
-      backgroundColor: '#7734CB',
+        backgroundColor: '#7734CB',
       margin: theme.spacing(5, 0, 2),
     },
     formControl: {
