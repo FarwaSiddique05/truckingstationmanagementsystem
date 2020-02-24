@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { Link, Route } from 'react-router-dom';
 // import { makeStyles } from '@material-ui/core/styles';
 // import Paper from '@material-ui/core/Paper';
@@ -16,7 +16,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { useStyles } from './style'
-import AppN from 'D:/React/tsmsystem/src/component/appNavigation'
+// import Dashboard from '../../appNavigation'
 
 
 function Copyright() {
@@ -28,22 +28,23 @@ function Copyright() {
         </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
+
     </Typography>
   );
 }
 
 export default function Login() {
   const classes = useStyles();
-const[email, emailSet]=useState('abc@gmail.com');
-const emailHandler = (e)=>{
-  emailSet(e.target.value)
-}
-const[password, setPassword]=useState('');
-const passwordHandler = (e) =>{
-  setPassword(e.target.value)
-}
-console.log(password)
-console.log(email)
+  const [email, emailSet] = useState('abc@gmail.com');
+  const emailHandler = (e) => {
+    emailSet(e.target.value)
+  }
+  const [password, setPassword] = useState('');
+  const passwordHandler = (e) => {
+    setPassword(e.target.value)
+  }
+  console.log(password)
+  console.log(email)
   return (
     <div className={classes.root}>
       <Grid container spacing={0}>
@@ -79,10 +80,10 @@ console.log(email)
                   name="email"
                   autoComplete="email"
                   autoFocus
-                  value = {email}
+                  value={email}
                   // onChange = {(e)=>emailHandler(e.target.value)}
-  onChange={emailHandler}
-  />
+                  onChange={emailHandler}
+                />
                 <TextField
                   InputProps={{
                     classes: {
@@ -98,28 +99,25 @@ console.log(email)
                   type="password"
                   id="password"
                   autoComplete="current-password"
-                  value= {password}
+                  value={password}
                   onChange={passwordHandler}
-      />
+                />
                 <FormControlLabel
                   control={<Checkbox value="remember" className={classes.chkbox} />}
                   label="Remember me"
-                  
                 />
-              
-              <Link to = "/main">
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  color="primary"
-                  className={classes.submit}
-                >
-               
-                  Sign In
+                <Link to="/dashboard">
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                    className={classes.submit}
+                  >
+                    Sign In
           </Button>
-               </Link>  
-          
+                </Link>
+
                 <Grid container>
                   <Grid item xs>
                     <Link href="#" variant="body2">

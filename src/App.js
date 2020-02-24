@@ -5,14 +5,14 @@ import React from 'react';
 // import S from './component/signup'
 // import D from './component/dashboard/Dashboard'
 import Nav from './navigation'
-import Users from './component/mainscreen/users'
+// import Users from './component/mainscreen/users'
 
 function App() {
   return (
     <div >
       {/* < Login /> */}
      <Nav />
-     <Users />
+     {/* <Users /> */}
     </div>
   );
 }
