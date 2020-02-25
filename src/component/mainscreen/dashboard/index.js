@@ -17,66 +17,66 @@ export default function Dashboard () {
         <Grid item xs={12} sm={3}>
         </Grid>
         <Grid item xs={12} sm={2}  >
-            <Grid item sm ={12} >  
-            <div  style={{ textAlign: "center", backgroundColor: '#0080ff' , height: 100  ,fontFamily: 'monstarete', fontSize:'30px'}}>
-
+            <Grid item sm ={12}  >  
              <Link to='adduser' style={{color:'white', textDecoration:'none'}}>
-          ADD USER
-            </Link>
-            </div>
-            <div  style={{ textAlign: "center", backgroundColor: '	#0040ff' , height: 100 ,fontFamily: 'monstarete' , fontSize:'30px'}}>
+            <div  style={{ textAlign: "center", backgroundColor: '#cc2b5e' , height: 100  ,fontFamily: 'monstarete', fontSize:'30px'}}>
 
-     <Link to='viewuser' style={{color:'white', textDecoration:'none'}} >
-        VIEW USER
-        </Link>
+          ADD USER
             </div>
+            </Link>
+     <Link to='viewuser' style={{color:'white', textDecoration:'none'}} >
+            <div  style={{ textAlign: "center", backgroundColor: '	 #753a88' , height: 100 ,fontFamily: 'monstarete' , fontSize:'30px'}}>
+
+        VIEW USER
+            </div>
+        </Link>
         </Grid>
         </Grid>
         <Grid item xs={12} sm={2}>
         <Grid item sm ={12} >  
+             <Link to='addparty' className={classes.link}>
             <div  style={{ textAlign: "center", backgroundColor: '#ff8080' , height: 100  ,fontFamily: 'monstarete', fontSize:'30px'}}>
 
-             <Link to='addparty' className={classes.link}>
           ADD PARTY
-            </Link>
             </div>
+            </Link>
+     <Link to='viewparty' className={classes.link} >
             <div  style={{ textAlign: "center", backgroundColor: '#ff4d4d' , height: 100 ,fontFamily: 'monstarete' , fontSize:'30px'}}>
 
-     <Link to='viewparty' className={classes.link} >
         VIEW PARTY
-        </Link>
             </div>
+        </Link>
         </Grid>
         </Grid>
         <Grid item xs={12} sm={2}>
         <Grid item sm ={12} >  
-            <div  style={{ textAlign: "center", backgroundColor: 'orange' , height: 100  ,fontFamily: 'monstarete', fontSize:'30px'}}>
 
              <Link to='adduser' className={classes.link}>
+            <div  style={{ textAlign: "center", backgroundColor: 'orange' , height: 100  ,fontFamily: 'monstarete', fontSize:'30px'}}>
           ADD USER
-            </Link>
             </div>
+            </Link>
+     <Link to='adduser' className={classes.link} >
             <div  style={{ textAlign: "center", backgroundColor: '#ff8000' , height: 100 ,fontFamily: 'monstarete' , fontSize:'30px'}}>
 
-     <Link to='adduser' className={classes.link} >
         VIEW USER
-        </Link>
             </div>
+        </Link>
         </Grid>        </Grid>
         <Grid item xs={12} sm={2}>
         <Grid item sm ={12} >  
+             <Link to='adduser' className={classes.link}>
             <div  style={{ textAlign: "center", backgroundColor: '#ff4000' , height: 100  ,fontFamily: 'monstarete', fontSize:'30px'}}>
 
-             <Link to='adduser' className={classes.link}>
           ADD USER
-            </Link>
             </div>
+            </Link>
+     <Link to='adduser' className={classes.link} >
             <div  style={{ textAlign: "center", backgroundColor: '#ff0000' , height: 100 ,fontFamily: 'monstarete' , fontSize:'30px'}}>
 
-     <Link to='adduser' className={classes.link} >
         VIEW USER
-        </Link>
             </div>
+        </Link>
         </Grid>
         </Grid>
       </Grid>

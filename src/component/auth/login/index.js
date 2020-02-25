@@ -37,7 +37,7 @@ function Copyright() {
 export default function Login() {
   const classes = useStyles();
   const dispatch = useDispatch()
-  const [email, emailSet] = useState('abc@gmail.com');
+  const [email, emailSet] = useState('');
   const emailHandler = (e) => {
     emailSet(e.target.value)
   }
