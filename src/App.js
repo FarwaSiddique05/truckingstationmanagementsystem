@@ -6,13 +6,17 @@ import React from 'react';
 // import D from './component/dashboard/Dashboard'
 import Nav from './navigation'
 // import Users from './component/mainscreen/users'
+import { Provider } from 'react-redux';
+import store from './redux/store'
 
 function App() {
   return (
     <div >
       {/* < Login /> */}
-     <Nav />
-     {/* <Users /> */}
+      <Provider store={store}>
+        <Nav />
+      </Provider>
+      {/* <Users /> */}
     </div>
   );
 }

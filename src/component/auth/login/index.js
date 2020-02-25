@@ -17,7 +17,8 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { useStyles } from './style'
 // import Dashboard from '../../appNavigation'
-
+import {login} from '../../../redux/action/auth';
+import {useDispatch} from 'react-redux'
 
 function Copyright() {
   return (
@@ -35,6 +36,7 @@ function Copyright() {
 
 export default function Login() {
   const classes = useStyles();
+  const dispatch = useDispatch()
   const [email, emailSet] = useState('abc@gmail.com');
   const emailHandler = (e) => {
     emailSet(e.target.value)
@@ -43,6 +45,20 @@ export default function Login() {
   const passwordHandler = (e) => {
     setPassword(e.target.value)
   }
+
+
+  const submit = ()=>{
+    let data = {
+      email: email,
+      password: password
+    }
+    console.log("in component", data);
+    dispatch(login(data))
+    
+  }
+
+
+
   console.log(password)
   console.log(email)
   return (
@@ -113,6 +129,7 @@ export default function Login() {
                     variant="contained"
                     color="primary"
                     className={classes.submit}
+                    onClick={submit}
                   >
                     Sign In
           </Button>
