@@ -1,6 +1,9 @@
 import {combineReducers} from 'redux'
-import auth from './auth'
-
+import login from './loginrudecer'
+import User from './userReducer'
+import party from './partyreducer'
 export default combineReducers({
-    auth
+    login,
+    User,
+    party ,
 })

@@ -1,11 +1,11 @@
-import { LOGIN } from '../action/auth'
+import { LOGIN } from '../action/login'
 
 
 let initState = {
     loginData: {}
 }
 
-const authReducer = (state = initState, action) => {
+const loginReducer = (state = initState, action) => {
     switch (action.type) {
         case LOGIN:
             console.log("in reducer", action.payload);
@@ -22,4 +22,4 @@ const authReducer = (state = initState, action) => {
 }
 
 
-export default authReducer
+export default loginReducer
