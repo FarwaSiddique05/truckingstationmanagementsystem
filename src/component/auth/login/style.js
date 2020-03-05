@@ -24,7 +24,8 @@ export const useStyles = makeStyles(theme => ({
     },
     submit: {
       margin: theme.spacing(3, 0, 2),
-      backgroundColor:'#7734CB'
+      backgroundColor:'#7734CB',
+      textDecoration:'none',
     },
     Title:{
         backgroundColor:'#7734CB',

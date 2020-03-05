@@ -11,6 +11,7 @@ import Select from '@material-ui/core/Select';
 import {useStyles} from './style'
 import {useDispatch } from 'react-redux'
 import { adduser } from "../../../redux/action/adduser";
+import Header from '../../header'
 export default function AddUser() {
   const dispatch = useDispatch();
   const classes = useStyles();
@@ -71,6 +72,7 @@ const submit = ()=>{
   };
   return (
     <Container component="main" maxWidth="xs">
+    <Header />
       <CssBaseline />
       <h1 style={{ textAlign: "center" }}>ADD USER</h1>
       <div className={classes.paper}>

@@ -11,6 +11,7 @@ import Select from '@material-ui/core/Select';
 import {useStyles} from './style'
 import {useDispatch} from 'react-redux'
 import { addparty } from "../../../redux/action/addparty";
+import Header from '../../header'
 
 export default function AddUser() {
   const classes = useStyles();
@@ -57,6 +58,7 @@ dispatch(addparty(data))
   };
   return (
     <Container component="main" maxWidth="xs">
+      <Header />
       <CssBaseline />
       <h1 style={{ textAlign: "center" }}>ADD PARTIES</h1>
       <div className={classes.paper}>
